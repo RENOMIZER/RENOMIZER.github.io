@@ -14,6 +14,21 @@ baseurl: "" # the subpath of your site, e.g. /blog
 domain: "renomizer.github.io"
 url: "https://renomizer.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
+twitter:
+  username: ITS_NO_USE__
+  card: summary
+
+logo: /assets/favicon.png
+
+social:
+  name: Konstantin
+  links:
+    - https://twitter.com/ITS_NO_USE__
+    - https://github.com/RENOMIZER
+
+webmaster_verifications:
+  google: klNuE8cm6_V-qUy0veaOTfrHmghRVSY1-fgbPZJ526Q
+
 header_pages:
   - about.markdown
 
