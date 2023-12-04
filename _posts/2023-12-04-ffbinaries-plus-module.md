@@ -6,7 +6,7 @@ categories: new-stuff
 ---
 
 #### A module for downloading ffmpeg binaries.
-
+<!--more-->
 For all the time my YTM-DLP project existed I've been using `ffbinaries` module to download `ffmpeg` binaries.
 
 It works great, without problems downloading needed binaries, but it has one issue. It uses `request` module

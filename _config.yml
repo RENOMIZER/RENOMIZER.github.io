@@ -38,6 +38,7 @@ minima:
     - { platform: instagram, user_url: "https://instagram.com/Renomizer_MC", title: Instagram  }
 
 show_excerpts: true
+excerpt_separator: <!--more-->
 
 # Build settings
 # theme: minima

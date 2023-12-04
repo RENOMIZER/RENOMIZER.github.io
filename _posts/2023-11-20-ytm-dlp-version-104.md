@@ -6,7 +6,7 @@ categories: ytm-dlp-update
 ---
 
 #### [New version](https://github.com/RENOMIZER/ytm-dlp-gui/releases/tag/v1.0.4) of YTM-DLP has arrived!
-
+<!--more-->
 I've added abilities to change output file format and choose whether or not to sort them,<br>
 plus some tweaks to the css file of the index page to make it scale properly.
 
