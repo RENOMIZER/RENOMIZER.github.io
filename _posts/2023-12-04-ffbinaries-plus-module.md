@@ -5,7 +5,7 @@ date:   2023-12-04 21:54:25 +0300
 categories: new-stuff
 ---
 
-#### A module for downloading ffmpeg binaries.
+#### A module for downloading `ffmpeg` binaries.
 <!--more-->
 For all the time my YTM-DLP project existed I've been using `ffbinaries` module to download `ffmpeg` binaries.
 
