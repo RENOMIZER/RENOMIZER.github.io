@@ -2,7 +2,7 @@
 layout: post
 title:  "YTM-DLP version 1.0.4 update"
 date:   2023-11-20 06:31:53 +0300
-categories: ytm-dlp update
+categories: ytm-dlp-update
 ---
 
 #### [New version](https://github.com/RENOMIZER/ytm-dlp-gui/releases/tag/v1.0.4) of YTM-DLP has arrived!
