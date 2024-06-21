@@ -4,14 +4,15 @@
 <head>
   <script src="/js/index.js"></script>
   <link rel="stylesheet" href="/css/index.css">
-  <title>Terminal</title>
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>Renomizer's Terminal</title>
 </head>
 
 <body>
   <div class="scanlines"></div>
 
   <div class="header">
-    <a href="/index.html" class="text">[Home]</a>
+    <a href="/" class="text">[Home]</a>
     <a href="/pages/about.html" class="text">[About]</a>
     <a href="/pages/blog.html" class="text">[Blog]</a>
     <a href="/pages/links.html" class="text">[Links]</a>
@@ -27,10 +28,16 @@
           My main languages are JavaScript and Python but right now I'm also studying Java. <br>
         </p>
       </div>
-      <div class="container my-photo" id="myPhoto">
-        <a class="text"> < </a>
-        <img src="/resources/images/pfp1.png" alt="One of pfps I use">
-        <a class="text"> > </a>
+      <div class="pfp-container">
+        <div class="container pfp">
+          <img src="/resources/images/pfp3.jpg" alt="Some of the profile pictures I use" id="pfp">
+        </div>
+        <div class="pfp-controler">
+          <a class="text" id="prevPfp"> < </a>
+          <span class="text"> | </span>
+          <a class="text" id="nextPfp"> > </a>
+        </div>
+        <span class="text">Some of the profile pictures I use</span>
       </div>
     </section>
   </div>

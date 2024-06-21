@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'DOS/V';
+  src: url(/resources/fonts/Web437_DOS-V_TWN19.woff);
+}
+
+:root {
+  --green: greenyellow;
+  --repeat: 2s; /* animation timing */
+  --height: 8px; /* total pixel height from scanline top to bottom of animation */
+  --area: 60%; /* percentage of height the scanline covers */
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}
+
+.scanlines {
+  animation: scan var(--repeat) linear infinite;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  transform-origin: center;
+  background: linear-gradient(to bottom, #0000000a, #0000000a var(--area), #cccccc0a var(--area), #cccccc0a);
+  background-color: rgba(0, 0, 0, 0.075);
+  background-size: 100% var(--height);
+  background-position-y: 0px;
+  pointer-events: none;
+}
+
+@keyframes scan {
+  0% { background-position-y: 0px; }
+  100% { background-position-y: var(--height); }
+}
+
+.text {
+  width: 100%;
+  margin: auto 0%;
+  color: var(--green);
+  font-family: 'DOS/V';
+  font-size: 150%;
+  text-decoration: none;
+  text-shadow: 0 0 5px var(--green);
+}
+
+.container {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+circle {
+  fill: var(--green);
+  filter: drop-shadow(0 0 5px var(--green));
+}
+
+path {
+  fill: var(--green);
+  filter: drop-shadow(0 0 5px var(--green));
+}
+
+svg {
+  margin-left: 5%;
+  height: 100px;
+  width: 100px;
+}

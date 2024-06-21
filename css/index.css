@@ -39,7 +39,7 @@ body {
 .header {
   height: 50px;
   width: auto;
-  min-width: 408px;
+  min-width: 442.8px;
   margin-bottom: 10px;
   padding: 10px 5%;
   border-color: var(--green);
@@ -74,7 +74,31 @@ body {
 }
 
 .main-container {
-  min-width: 445px;
+  min-width: 442.8px;
+  padding: 5%;
+}
+
+.pfp-container {
+  width: min-content;
+  height: min-content;
+  margin-left: 5%;
+  padding-bottom: 5%;
+  margin-bottom: 10px;
+}
+
+.pfp {
+  height: 200px;
+}
+
+.pfp-controler {
+  display: flex;
+  justify-content: center;
+}
+
+.pfp-controler>* {
+  margin: 5%;
+  user-select: none;
+  cursor: pointer;
 }
 
 .about-section {
@@ -82,24 +106,5 @@ body {
 }
 
 .about {
-  height: auto;
-  margin: 5% 0% 5% 5%;
   padding: 5%;
-}
-
-.my-photo {
-  margin: 5%;
-  padding: 5% 3%;
-  display: flex;
-}
-
-.my-photo>a {
-  margin: auto 0%;
-  cursor: pointer;
-}
-
-.my-photo>img {
-  height: 100%;
-  width: 100%;
-  margin: 0% 5%;
 }
