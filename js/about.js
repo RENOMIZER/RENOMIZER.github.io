@@ -1,3 +1,3 @@
 window.onload = () => {
-  window.location.href = '/pages/underconstruction.html'
+  window.location.href = '/underconstruction.html'
 }

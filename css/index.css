@@ -108,3 +108,20 @@ body {
 .about {
   padding: 5%;
 }
+
+.underscore {
+  user-select: none;
+  animation: blink 3s step-end infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -13,7 +13,12 @@ window.onload = () => {
   if (isMobile) {
     document.body.style.padding = "5%"
     document.querySelector('.header').style.height = "100px"
-    document.querySelectorAll('.text').forEach(e => { e.style.fontSize = "275%" }) 
+    document.querySelector('.header').style.borderWidth = "6px"
+    document.querySelector('.header').style.boxShadow = "0 0 10px var(--green)"
+    document.querySelectorAll('.text').forEach(e => { e.style.fontSize = "275%" })
+    document.querySelectorAll('.text').forEach(e => { e.style.textShadow = "0 0 10px var(--green)" })
+    document.querySelectorAll('.container').forEach(e => { e.style.borderWidth = "6px" })
+    document.querySelectorAll('.container').forEach(e => { e.style.boxShadow = "0 0 10px var(--green)" })
   }
 }
 
