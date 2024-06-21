@@ -11,7 +11,7 @@ window.onload = () => {
   document.getElementById('nextPfp').addEventListener('click', () => changePfp('next'))
 
   if (isMobile) {
-    document.body.style.padding = "10px 5%"
+    document.body.style.padding = "5%"
     document.querySelector('.header').style.height = "100px"
     document.querySelectorAll('.text').forEach(e => { e.style.fontSize = "275%" }) 
   }
