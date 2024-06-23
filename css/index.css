@@ -10,7 +10,12 @@
   --area: 60%;    /* percentage of height the scanline covers */
 }
 
+html {
+  height: 100%;
+}
+
 body {
+  height: 100%;
   margin: 0;
   padding: 10px 20%;
   background-color: black;
@@ -18,9 +23,9 @@ body {
 
 .scanlines {
   animation: scan var(--repeat) linear infinite;
-  position: absolute;
-  left: 0px;
-  top: 0px;
+  position: fixed;
+  left: 0;
+  top: 0;
   height: 100%;
   width: 100%;
   transform-origin: center;
@@ -64,8 +69,8 @@ body {
 }
 
 .container {
-  height: 100%;
-  margin-bottom: 10px;
+  height: fit-content;
+  margin-bottom: 5%;
   border-color: var(--green);
   border-style: solid;
   border-width: 3px;
@@ -101,14 +106,6 @@ body {
   cursor: pointer;
 }
 
-.about-section {
-  display: flex;
-}
-
-.about {
-  padding: 5%;
-}
-
 .underscore {
   user-select: none;
   animation: blink 3s step-end infinite;
@@ -124,4 +121,19 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+.music {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  padding: 5%;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin-left: 5%;
+  padding: 5%;
 }

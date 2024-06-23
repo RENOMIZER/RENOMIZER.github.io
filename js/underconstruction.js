@@ -1,8 +1,8 @@
 let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 
-window.onload = () => {
+window.addEventListener("DOMContentLoaded", () => {
   if (isMobile) {
-    document.querySelector('svg').style.transform = 'scale(2)'
-    document.querySelectorAll('.text').forEach(e => { e.style.fontSize = "300%" }) 
+    $("svg").css("transform", "scale(2)")
+    $(".text").css("font-size", "300%")
   }
-}
+})

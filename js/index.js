@@ -1,51 +1,37 @@
-let isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)
 let pfps = [
   "/resources/images/pfp1.jpg",
   "/resources/images/pfp2.jpg",
   "/resources/images/pfp3.jpg"
 ]
 let currentPfp = 2
+let obs
 
-window.onload = () => {
-  document.getElementById('prevPfp').addEventListener('click', () => changePfp('prev'))
-  document.getElementById('nextPfp').addEventListener('click', () => changePfp('next'))
+window.addEventListener("DOMContentLoaded", async () => {
+  $("#nextPfp").on("click", () => changePfp('next'))
+  $("#prevPfp").on("click", () => changePfp('prev'))
 
-  if (isMobile) {
-    document.body.style.padding = "5%"
-    document.querySelector('.header').style.height = "100px"
-    document.querySelector('.header').style.borderWidth = "6px"
-    document.querySelector('.header').style.boxShadow = "0 0 10px var(--green)"
-    document.querySelectorAll('.text').forEach(e => { e.style.fontSize = "275%" })
-    document.querySelectorAll('.text').forEach(e => { e.style.textShadow = "0 0 10px var(--green)" })
-    document.querySelectorAll('.container').forEach(e => { e.style.borderWidth = "6px" })
-    document.querySelectorAll('.container').forEach(e => { e.style.boxShadow = "0 0 10px var(--green)" })
-  }
-}
+  await $.getJSON("/resources/data/current_obs.json", (data) => { obs = data })
+
+  $("#musicObs").text(obs.music)
+  $("#gameObs").text(obs.game)
+  $("#musicObs").attr("href", obs.musicLink)
+  $("#gameObs").attr("href", obs.gameLink)
+  $(".music > img").attr("src", obs.musicArt)
+  $(".game > img").attr("src", obs.gameArt)
+})
 
 function changePfp(dir) {
   switch (dir) {
     case 'next':
-      if (currentPfp != 2) {
-        currentPfp++
-        document.getElementById('pfp').setAttribute('src', pfps[currentPfp])
-      }
-      else {
-        currentPfp = 0
-        document.getElementById('pfp').setAttribute('src', pfps[currentPfp])
-      }
-      
+      currentPfp = currentPfp != 2 ? currentPfp+1 : 0
+
       break
-      
+
     case 'prev':
-      if (currentPfp != 0) {
-        currentPfp--
-        document.getElementById('pfp').setAttribute('src', pfps[currentPfp])
-      }
-      else {
-        currentPfp = 2
-        document.getElementById('pfp').setAttribute('src', pfps[currentPfp])
-      }
+      currentPfp = currentPfp != 0 ? currentPfp-1 : 2
 
       break
   }
+
+  $("#pfp").attr('src', pfps[currentPfp])
 }
