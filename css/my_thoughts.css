@@ -15,7 +15,6 @@ html {
 }
 
 body {
-  height: 100%;
   margin: 0;
   padding: 10px 20%;
   background-color: black;
@@ -78,6 +77,10 @@ body {
   box-shadow: 0 0 5px var(--green);
 }
 
+.container>h1 {
+  margin: 0%;
+}
+
 .main-container {
   min-width: 442.8px;
   margin-bottom: 0%;
@@ -85,27 +88,9 @@ body {
   padding-bottom: 0%;
 }
 
-.pfp-container {
-  width: min-content;
-  height: min-content;
-  margin-left: 5%;
-  padding-bottom: 5%;
-  margin-bottom: 10px;
-}
-
-.pfp {
-  height: 200px;
-}
-
-.pfp-controler {
-  display: flex;
-  justify-content: center;
-}
-
-.pfp-controler>* {
-  margin: 5%;
-  user-select: none;
-  cursor: pointer;
+.latest-container {
+  margin-top: 5%;
+  padding: 5%;
 }
 
 .underscore {
@@ -123,19 +108,4 @@ body {
   100% {
     opacity: 1;
   }
-}
-
-.music {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  padding: 5%;
-}
-
-.game {
-  display: flex;
-  flex-direction: column;
-  width: fit-content;
-  margin-left: 5%;
-  padding: 5%;
 }
