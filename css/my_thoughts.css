@@ -1,8 +1,21 @@
-.container>h1 {
-  margin: 0%;
-}
-
 .latest-container {
   margin-top: 5%;
   padding: 5%;
+}
+
+.music {
+  margin-bottom: 0% !important;
+  width: 100%;
+  padding: 5%;
+}
+
+.games {
+  margin-bottom: 0% !important;
+  width: 100%;
+  margin-left: 5%;
+  padding: 5%;
+}
+
+.rest {
+  display: flex;
 }

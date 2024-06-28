@@ -1,12 +1,11 @@
-.container>h1 {
-  margin: 0%;
+.thoughts {
+  margin: 5% 0%;
+  padding: 5%;
 }
 
-.thoughts {
-  padding: 5%;
-  margin: 5% 0%;
-}
+
 
 .posts {
   padding: 5%;
+  margin-bottom: 0% !important;
 }

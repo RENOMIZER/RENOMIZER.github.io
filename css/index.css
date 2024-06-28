@@ -7,7 +7,7 @@
 }
 
 .pfp {
-  height: 200px;
+  height: 200px !important;
 }
 
 .pfp-controler {
@@ -22,6 +22,7 @@
 }
 
 .music {
+  height: auto;
   display: flex;
   flex-direction: column;
   width: fit-content;
@@ -29,9 +30,26 @@
 }
 
 .game {
+  height: auto !important;
   display: flex;
   flex-direction: column;
   width: fit-content;
   margin-left: 5%;
   padding: 5%;
+}
+
+.main-container {
+  padding-bottom: 0% !important;
+}
+
+.about-section {
+  display: flex;
+}
+
+.about {
+  padding: 5%;
+}
+
+.obs-section {
+  display: flex;
 }

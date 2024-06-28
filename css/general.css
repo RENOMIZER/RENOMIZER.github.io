@@ -10,6 +10,11 @@
   --area: 60%;    /* percentage of height the scanline covers */
 }
 
+*::selection {
+  color: black;
+  background: var(--green);
+}
+
 html {
   height: 100%;
 }
@@ -81,10 +86,10 @@ body {
   min-width: 442.8px;
   margin-bottom: 0%;
   padding: 5%;
-  padding-bottom: 0%;
 }
 
 .underscore {
+  margin: 1% 0%;
   user-select: none;
   animation: blink 3s step-end infinite;
 }
@@ -99,4 +104,8 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+h1 {
+  margin: 0%;
 }
