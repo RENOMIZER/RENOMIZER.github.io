@@ -19,9 +19,13 @@
   } 
 </style>
 
+<script>
+  import { base } from '$app/paths';
+</script>
+
 <div class="header">
-  <a href="/" class="text">[Home]</a>
-  <a href="/underconstruction" class="text">[About]</a>
-  <a href="/blog" class="text">[Blog]</a>
-  <a href="/underconstruction" class="text">[Links]</a>   
+  <a href="{ base }/" class="text">[Home]</a>
+  <a href="{ base }/underconstruction" class="text">[About]</a>
+  <a href="{ base }/blog" class="text">[Blog]</a>
+  <a href="{ base }/underconstruction" class="text">[Links]</a>   
 </div>

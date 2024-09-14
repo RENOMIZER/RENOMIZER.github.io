@@ -1,4 +1,6 @@
 <script>
+  import { base } from '$app/paths';
+
   export let data
 </script>
 
@@ -8,4 +10,4 @@
   {@html data.post }
 </p>
 
-<a href="/blog" class="text">{ '<<' } My previous posts</a>
+<a href="{ base }/blog" class="text">{ '<<' } My previous posts</a>

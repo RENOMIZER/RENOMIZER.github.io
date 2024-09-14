@@ -70,6 +70,8 @@
 </style>
 
 <script lang='ts'>
+  import { base } from '$app/paths';
+
   export let data;
   let pfp = 1
 
@@ -113,12 +115,12 @@
     <span class="text" style="margin-bottom: 5%;">My current music obssession is:</span>
     <img src={data.obs.musicArt} alt={data.obs.music}>
     <a href={data.obs.musicLink} class="text" style="font-weight: bold; margin: 5% 0%;">{data.obs.music}</a>
-    <a href="/blog/mythoughts/music/latest" class="text">My thoughts >></a>
+    <a href="{ base }/blog/mythoughts/music/latest" class="text">My thoughts >></a>
   </div>
   <div class="container game">
     <span class="text" style="margin-bottom: 5%;">My current video game obssession is:</span>
     <img src={data.obs.gameArt} alt={data.obs.game}>
     <a href={data.obs.gameLink} class="text" style="font-weight: bold; margin: 5% 0%;">{data.obs.game}</a>
-    <a href="/blog/mythoughts/game/latest" class="text">My thoughts >></a>
+    <a href="{ base }/blog/mythoughts/game/latest" class="text">My thoughts >></a>
   </div>
 </section>

@@ -3,6 +3,8 @@
 </header>
 
 <script>
+  import { base } from '$app/paths';
+
   export let data
 </script>
 
@@ -10,3 +12,5 @@
 <p class="text">
   {@html data.thought }
 </p>
+
+<a href="{ base }/blog/mythoughts" class="text">{ '<<' } My previous thoughts</a>

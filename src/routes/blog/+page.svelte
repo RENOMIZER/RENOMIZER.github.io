@@ -15,6 +15,8 @@
 </style>
 
 <script>
+  import { base } from '$app/paths';
+
   export let data
 </script>
 
@@ -22,13 +24,13 @@
 <span class="text">Here I post stuff in more details than I usually do on Twitter/Bsky or in release notes on Github.</span>
 <div class="container thoughts">
   <h1 class="text">My thoughts:</h1>
-  <a href="/blog/mythoughts" class="text">My latest and previous thoughts on some music and games >></a>
+  <a href="{ base }/blog/mythoughts" class="text">My latest and previous thoughts on some music and games >></a>
 </div>
 <div class="container posts">
   <h1 class="text">My posts:</h1>
 
   {#each data.summaries as post}
-    <a href="/blog/{ post.date }" class="text">{ post.date } - { post.title }</a> <br>
+    <a href="{ base }/blog/{ post.date }" class="text">{ post.date } - { post.title }</a> <br>
   {/each}
   
 </div>  

@@ -27,6 +27,8 @@
 </style>
 
 <script>
+  import { base } from '$app/paths';
+
   export let data
 </script>
 
@@ -34,15 +36,15 @@
 <span class="text">This is my thoughts on things that really got me.</span>
 <div class="container latest-container">
   <h1 class="text">My latest thoughts:</h1>
-  <a href="/blog/mythoughts/game/latest" class="text"> - On game <b>{ data.gthoughts[0].title }</b> >></a><br>
-  <a href="/blog/mythoughts/music/latest" class="text"> - On track <b>{ data.mthoughts[0].title }</b> >></a>
+  <a href="{ base }/blog/mythoughts/game/latest" class="text"> - On game <b>{ data.gthoughts[0].title }</b> >></a><br>
+  <a href="{ base }/blog/mythoughts/music/latest" class="text"> - On track <b>{ data.mthoughts[0].title }</b> >></a>
 </div>
 <section class="rest">
   <div class="container music">
     <h1 class="text">My previous thoughts on music:</h1>
 
     {#each data.mthoughts.slice(1,-1) as thought}
-      <a href="/blog/mythoughts/music/{thought.slug}" class="text">{ thought.title } >></a> <br>
+      <a href="{ base }/blog/mythoughts/music/{thought.slug}" class="text">{ thought.title } >></a> <br>
     {/each}
 
   </div>
@@ -50,7 +52,7 @@
     <h1 class="text">My previous thoughts on games:</h1>
 
     {#each data.gthoughts.slice(1,-1) as thought}
-      <a href="/blog/mythoughts/game/{thought.slug}" class="text">{ thought.title } >></a> <br>
+      <a href="{ base }/blog/mythoughts/game/{thought.slug}" class="text">{ thought.title } >></a> <br>
     {/each}
 
   </div>
