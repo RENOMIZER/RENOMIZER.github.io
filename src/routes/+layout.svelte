@@ -1,0 +1,89 @@
+<style>
+  @font-face {
+    font-family: 'DOS/V';
+    src: url( /fonts/Web437_DOS-V_TWN19.woff);
+  }
+
+  :root {
+    --green: greenyellow;
+    --repeat: 2s;   /* animation timing */
+    --height: 8px; /* total pixel height from scanline top to bottom of animation */
+    --area: 50%;    /* percentage of height the scanline covers */
+  }
+
+  :global(*)::selection {
+    color: black;
+    background: var(--green);
+  }
+
+  :global(body) {  
+    margin: 0;
+    padding: 10px 20%;
+    background-color: black;
+  } 
+
+  :global(.text) {
+    color: var(--green);
+    font-family: 'DOS/V';
+    font-size: 150%;
+    text-decoration: none;
+    text-shadow: 0 0 5px var(--green);
+  }
+
+  :global(.container) {
+    height: fit-content;
+    margin-bottom: 5%;
+    border-color: var(--green);
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 2px;
+    box-shadow: 0 0 5px var(--green);
+  }
+
+  .main-container {
+    min-width: 442.8px;
+    margin-bottom: 0%;
+    padding: 5%;
+  }
+
+  .underscore {
+  margin: 1% 0%;
+  user-select: none;
+  animation: blink 3s step-end infinite;
+}
+
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    margin: 0%;
+  }
+</style>
+
+<script>
+  import { page } from "$app/stores";
+  import Header from "./Header.svelte";
+  import Scanlines from "./Scanlines.svelte";
+</script>
+
+<Scanlines/>
+
+{#if $page.url.pathname.includes("/underconstruction")}
+  <slot/>
+{:else}
+  <Header/>
+  <div class="container main-container">
+    <slot/>
+  </div>
+
+  <h1 class="text underscore">_</h1>
+{/if}

@@ -1,0 +1,1 @@
+export const pfps = [1,2,3,4]
